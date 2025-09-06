@@ -1,3 +1,16 @@
-626 - https://leetcode.com/problems/exchange-seats/submissions/1559006770
+# 626 
+```sql
+SELECT 
+    CASE 
+        WHEN id % 2 = 1 AND id = (SELECT MAX(id) FROM seat) THEN id
+        WHEN id % 2 = 1 THEN id + 1
+        ELSE id - 1
+    END AS id,
+    student
+FROM seat
+ORDER BY id;
+```
+https://leetcode.com/problems/exchange-seats/submissions/1559006770
+
 1045 - https://leetcode.com/problems/customers-who-bought-all-products/submissions/1761008690
 1211 - https://leetcode.com/problems/queries-quality-and-percentage/submissions/1761017545
